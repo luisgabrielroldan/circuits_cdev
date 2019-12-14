@@ -24,3 +24,5 @@ circuits_cdev-*.tar
 
 /priv/
 
+/.elixir_ls/
+

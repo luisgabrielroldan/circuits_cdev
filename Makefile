@@ -56,7 +56,7 @@ endif
 ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR)
 ERL_LDFLAGS ?= -L$(ERL_EI_LIBDIR) -lei
 
-SRC = src/cdev_nif.c
+SRC = src/cdev_nif.c src/nif_utils.c src/hal_cdev.c
 HEADERS =$(wildcard src/*.h)
 OBJ = $(SRC:src/%.c=$(BUILD)/%.o)
 

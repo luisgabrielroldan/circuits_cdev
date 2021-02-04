@@ -23,8 +23,10 @@ struct gpio_chip
 };
 
 
-int hal_open(struct gpio_chip *chip, const char *chip_path, char *error_str);
+int hal_chip_open(struct gpio_chip *chip, const char *chip_path, char *error_str);
 void hal_chip_close(struct gpio_chip *chip);
+ERL_NIF_TERM hal_getinfo(ErlNifEnv *env, struct gpio_chip *chip);
+ERL_NIF_TERM hal_get_lineinfo(ErlNifEnv *env, struct gpio_chip *chip, int offset);
 void hal_line_close(struct gpiohandle_request *req);
 void hal_event_request_close(struct gpioevent_request *event_req);
 
